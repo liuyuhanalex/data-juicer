@@ -6,12 +6,12 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to data-juicer’s documentation! &mdash; data_juicer 1.2.2 documentation</title>
+  <title>Welcome to data-juicer’s documentation! &mdash; data_juicer 1.3.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-      <script src="_static/documentation_options.js?v=fd7cadf9"></script>
+      <script src="_static/documentation_options.js?v=1f29e9d3"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -89,7 +89,9 @@
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.Adapter"><code class="docutils literal notranslate"><span class="pre">Adapter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.Analyzer"><code class="docutils literal notranslate"><span class="pre">Analyzer</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.NestedDataset"><code class="docutils literal notranslate"><span class="pre">NestedDataset</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.Executor"><code class="docutils literal notranslate"><span class="pre">Executor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.ExecutorBase"><code class="docutils literal notranslate"><span class="pre">ExecutorBase</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.ExecutorFactory"><code class="docutils literal notranslate"><span class="pre">ExecutorFactory</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.DefaultExecutor"><code class="docutils literal notranslate"><span class="pre">DefaultExecutor</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.Exporter"><code class="docutils literal notranslate"><span class="pre">Exporter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.Monitor"><code class="docutils literal notranslate"><span class="pre">Monitor</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.core.html#data_juicer.core.Tracer"><code class="docutils literal notranslate"><span class="pre">Tracer</span></code></a></li>
@@ -181,6 +183,7 @@
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.FixUnicodeMapper"><code class="docutils literal notranslate"><span class="pre">FixUnicodeMapper</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.GenerateQAFromExamplesMapper"><code class="docutils literal notranslate"><span class="pre">GenerateQAFromExamplesMapper</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.GenerateQAFromTextMapper"><code class="docutils literal notranslate"><span class="pre">GenerateQAFromTextMapper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.HumanPreferenceAnnotationMapper"><code class="docutils literal notranslate"><span class="pre">HumanPreferenceAnnotationMapper</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.ImageBlurMapper"><code class="docutils literal notranslate"><span class="pre">ImageBlurMapper</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.ImageCaptioningFromGPT4VMapper"><code class="docutils literal notranslate"><span class="pre">ImageCaptioningFromGPT4VMapper</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.ops.mapper.html#data_juicer.ops.mapper.ImageCaptioningMapper"><code class="docutils literal notranslate"><span class="pre">ImageCaptioningMapper</span></code></a></li>
@@ -280,10 +283,10 @@
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.config.html#data_juicer.config.export_config"><code class="docutils literal notranslate"><span class="pre">export_config()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.config.html#data_juicer.config.merge_config"><code class="docutils literal notranslate"><span class="pre">merge_config()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.config.html#data_juicer.config.prepare_side_configs"><code class="docutils literal notranslate"><span class="pre">prepare_side_configs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_juicer.config.html#data_juicer.config.get_default_cfg"><code class="docutils literal notranslate"><span class="pre">get_default_cfg()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_juicer.format.html">data_juicer.format</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.load_formatter"><code class="docutils literal notranslate"><span class="pre">load_formatter()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.JsonFormatter"><code class="docutils literal notranslate"><span class="pre">JsonFormatter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.LocalFormatter"><code class="docutils literal notranslate"><span class="pre">LocalFormatter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.RemoteFormatter"><code class="docutils literal notranslate"><span class="pre">RemoteFormatter</span></code></a></li>
@@ -291,7 +294,6 @@
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.ParquetFormatter"><code class="docutils literal notranslate"><span class="pre">ParquetFormatter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.CsvFormatter"><code class="docutils literal notranslate"><span class="pre">CsvFormatter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.TsvFormatter"><code class="docutils literal notranslate"><span class="pre">TsvFormatter</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.MixtureFormatter"><code class="docutils literal notranslate"><span class="pre">MixtureFormatter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.EmptyFormatter"><code class="docutils literal notranslate"><span class="pre">EmptyFormatter</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_juicer.format.html#data_juicer.format.RayEmptyFormatter"><code class="docutils literal notranslate"><span class="pre">RayEmptyFormatter</span></code></a></li>
 </ul>
